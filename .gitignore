@@ -1,0 +1,16 @@
+# Java compiled files
+*.class
+
+# IDE files
+.vscode/
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Logs
+*.log
+
+# Local configuration and credentials
+.env
+config.properties
