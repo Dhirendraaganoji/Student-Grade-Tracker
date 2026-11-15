@@ -8,14 +8,18 @@ public class DatabaseConnection {
             "jdbc:mysql://localhost:3306/student_db";
 
     private static final String USER = "studentapp";
-    private static final String PASSWORD = "JavaApp@Secure123";
+
+    private static final String PASSWORD =
+            System.getenv("DB_PASSWORD");
 
     public static Connection getConnection() {
+
         try {
             return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("Database connection failed!");
-            System.out.println(e.getMessage());
+            e.printStackTrace();
             return null;
         }
     }
