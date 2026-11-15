@@ -82,6 +82,31 @@ CREATE TABLE students (
 );
 ```
 
+## Database Configuration
+
+1. Install MySQL Server.
+2. Create the `student_db` database and `students` table.
+3. Create a MySQL user named `studentapp` and grant it access to `student_db`.
+4. Set the `DB_PASSWORD` environment variable to that user's password.
+
+### macOS Terminal
+
+```bash
+export DB_PASSWORD='your_mysql_password'
+```
+
+### Compile the project
+
+```bash
+javac -cp "lib/*" src/*.java
+```
+
+### Run the application
+
+```bash
+java -cp "src:lib/*" Main
+```
+
 ## How to Run
 
 Open the terminal inside the project folder.
